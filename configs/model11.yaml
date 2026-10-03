@@ -1,0 +1,13 @@
+model: 11
+architecture: models/convnext_unet.py
+builder: create_convnext_unet
+framework: tensorflow
+img_shape: [128, 128, 3]
+input_note: グレースケールを3チャネルに複製し、画素値は 0-255
+loss: models/losses.py:masked_tversky_loss
+l2_regularization: 3.6585547805757104e-06
+dropout_rate: 0.20518593073327507
+learning_rate: 0.00016540443829698962
+batch_size: 8
+tversky_alpha: 0.49811410155819086
+tversky_beta: 0.5018858984418091

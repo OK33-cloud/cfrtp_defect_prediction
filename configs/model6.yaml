@@ -1,0 +1,14 @@
+model: 6
+architecture: models/film_unet.py
+builder: create_multimodal_unet
+framework: tensorflow
+img_shape: [128, 128, 1]
+table_shape: [2]
+loss: models/losses.py:masked_weighted_bce
+l2_regularization: 2.1491892737728744e-06
+dropout_rate: 0.1835568640020008
+learning_rate: 0.0002975042544895845
+batch_size: 16
+pos_weight: 3.9406990920610108
+context_dim_1: 8
+context_dim_2: 16

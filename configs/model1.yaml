@@ -1,0 +1,12 @@
+model: 1
+architecture: models/unet.py
+builder: create_standard_unet
+framework: tensorflow
+img_shape: [128, 128, 1]
+loss: models/losses.py:masked_tversky_loss
+l2_regularization: 8.789908634130534e-06
+dropout_rate: 0.31699533130907326
+learning_rate: 0.00021323592180794078
+batch_size: 16
+tversky_alpha: 0.23368197208736374
+tversky_beta: 0.7663180279126363

@@ -1,0 +1,16 @@
+model: 3
+architecture: models/film_unet.py
+builder: create_multimodal_unet
+framework: tensorflow
+img_shape: [128, 128, 1]
+table_shape: [2]
+loss: models/losses.py:masked_tversky_loss
+note: 構造はモデル2と同じ。訓練と検証から外れ値の試料を除く。
+l2_regularization: 5.199596163537934e-06
+dropout_rate: 0.23628278632109553
+learning_rate: 0.00013702860133983354
+batch_size: 16
+tversky_alpha: 0.14515173049635158
+tversky_beta: 0.8548482695036485
+context_dim_1: 16
+context_dim_2: 16

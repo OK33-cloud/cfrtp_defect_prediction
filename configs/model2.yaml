@@ -1,0 +1,15 @@
+model: 2
+architecture: models/film_unet.py
+builder: create_multimodal_unet
+framework: tensorflow
+img_shape: [128, 128, 1]
+table_shape: [2]
+loss: models/losses.py:masked_tversky_loss
+l2_regularization: 1.7231834976210088e-06
+dropout_rate: 0.1609441760702102
+learning_rate: 0.00021037156532239287
+batch_size: 16
+tversky_alpha: 0.17341244779713036
+tversky_beta: 0.8265875522028696
+context_dim_1: 16
+context_dim_2: 32

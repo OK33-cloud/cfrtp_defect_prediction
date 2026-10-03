@@ -1,0 +1,12 @@
+model: 4
+architecture: models/attention_unet.py
+builder: create_attention_unet
+framework: tensorflow
+img_shape: [128, 128, 1]
+loss: models/losses.py:masked_tversky_loss
+l2_regularization: 3.9630626239356765e-06
+dropout_rate: 0.16591902818215903
+learning_rate: 0.00029410014326075926
+batch_size: 16
+tversky_alpha: 0.255138853950967
+tversky_beta: 0.744861146049033

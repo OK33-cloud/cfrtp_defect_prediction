@@ -1,0 +1,14 @@
+model: 8
+architecture: models/segformer.py
+builder: create_segformer
+framework: pytorch
+pretrained: nvidia/mit-b0
+img_shape: [3, 128, 128]
+input_note: グレースケールを3チャネルに複製し、ImageNet の平均と標準偏差で正規化
+loss: models/segformer.py:masked_tversky_loss
+weight_decay: 4.738974000709991e-06
+dropout_rate: 0.3738845805926134
+learning_rate: 0.00014472350766193287
+batch_size: 8
+tversky_alpha: 0.2778707464728815
+tversky_beta: 0.7221292535271184

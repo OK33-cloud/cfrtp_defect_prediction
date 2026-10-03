@@ -1,0 +1,12 @@
+model: 5
+architecture: models/unet.py
+builder: create_standard_unet
+framework: tensorflow
+img_shape: [128, 128, 1]
+loss: models/losses.py:masked_focal_loss
+l2_regularization: 1.0028856605403099e-06
+dropout_rate: 0.1899325330883069
+learning_rate: 0.00016547628325900416
+batch_size: 16
+focal_alpha: 0.7649411069187643
+focal_gamma: 0.878305070029406

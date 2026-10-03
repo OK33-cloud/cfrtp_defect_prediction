@@ -1,0 +1,12 @@
+model: 9
+architecture: models/unetpp.py
+builder: create_unetpp
+framework: tensorflow
+img_shape: [128, 128, 1]
+loss: models/losses.py:masked_tversky_loss
+l2_regularization: 1.5492006437796812e-05
+dropout_rate: 0.22215553131594082
+learning_rate: 0.00010767639149591655
+batch_size: 16
+tversky_alpha: 0.2552765427391759
+tversky_beta: 0.7447234572608241
